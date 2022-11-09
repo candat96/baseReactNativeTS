@@ -3,17 +3,17 @@ import {
     AxiosRequestConfig,
     AxiosError,
     AxiosResponse,
-} from './../../node_modules/axios/index.d';
+} from "axios";
 import axios from 'axios';
 import { Endpoints } from '../constants';
 
 
 const doLogout = (): void => {
-    console.error("Token expire - Do logout")
-}
+    console.error('Token expire - Do logout');
+};
 
 const saveToken = (token: string): void => {
-    console.log("Save new token to app", token)
+    console.log("Save new token to app", token);
 }
 
 const baseApiClient: AxiosInstance = axios.create({
@@ -38,7 +38,7 @@ baseApiClient.interceptors.response.use(
     function (response: AxiosResponse) {
         return response.data;
     },
-    function (error) { 
+    function (error) {
         const config = error.config
         if (error.response?.status !== 401) {
             return Promise.reject(error)
