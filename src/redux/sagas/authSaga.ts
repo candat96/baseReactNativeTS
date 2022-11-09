@@ -10,9 +10,9 @@ export function* watchAuthSaga() {
 
   function* handleLogin(action : PayloadAction<LoginPayload>) {
     try {
-        console.log("DDitj con me may saga ak  ", action.payload )
+
     } catch (error) {
-      
+
     }
 }
 

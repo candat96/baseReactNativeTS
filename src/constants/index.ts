@@ -1,2 +1,2 @@
 export * from "./Enpoints";
-export * from "./ScreenNames";
+export * from "./AppKeys";

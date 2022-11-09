@@ -19,7 +19,7 @@ export const getData = async (key: string): Promise<any> => {
     }
 }
 
-export const removeData = async (key: string, data: string): Promise<any> => {
+export const removeData = async (key: string): Promise<any> => {
     try {
         await AsyncStorage.removeItem(key);
         return Promise.resolve()
